@@ -1,4 +1,4 @@
-# 🛠️ SETUP.md — Getting Started in the Kingdom
+# 🛠️ Getting Started in the Kingdom
 
 > *Before you can build, you need to set up your workshop.*
 > This guide takes you from zero to running the kingdom locally — step by step.
