@@ -6,16 +6,19 @@ The kingdom requires its foundational structures to support the growing populati
 
 | Entity | Contract | Status |
 |--------|----------|--------|
-| **Lumberyard** | `AbstractLumberyard` | ✅ Example implementation — see [`Lumberyard.java`](../kingdom/src/main/java/kingdom/entities/Lumberyard.java) |
-| **Barracks** | [`AbstractBarracks`](../kingdom/src/main/java/kingdom/contracts/AbstractBarracks.java) | Not yet built — ready for contributors! |
-| **Blacksmith** | [`AbstractBlacksmith`](../kingdom/src/main/java/kingdom/contracts/AbstractBlacksmith.java) | Not yet built — ready for contributors! |
-| **Market** | [`AbstractMarket`](../kingdom/src/main/java/kingdom/contracts/AbstractMarket.java) | Not yet built — ready for contributors! |
+| **Lumberyard** | `AbstractLumberyard` | ✅ Built — see [`Lumberyard.java`](../kingdom/src/main/java/kingdom/entities/Lumberyard.java) |
+| **Market** | [`AbstractMarket`](../kingdom/src/main/java/kingdom/contracts/AbstractMarket.java) | ✅ Built by @higorv10 — see [`Market.java`](../kingdom/src/main/java/kingdom/entities/Market.java) |
+| **Barracks** | [`AbstractBarracks`](../kingdom/src/main/java/kingdom/contracts/AbstractBarracks.java) | ⚔️ Quest open — [#3](https://github.com/Hemanthkumar2k04/OOP-Kingdom/issues/3) |
+| **Blacksmith** | [`AbstractBlacksmith`](../kingdom/src/main/java/kingdom/contracts/AbstractBlacksmith.java) | ⚔️ Quest open — [#4](https://github.com/Hemanthkumar2k04/OOP-Kingdom/issues/4) |
+| **Hospital** | [`AbstractHospital`](../kingdom/src/main/java/kingdom/contracts/AbstractHospital.java) | ⚔️ Quest open — [#8](https://github.com/Hemanthkumar2k04/OOP-Kingdom/issues/8) |
+| **Library** | [`AbstractLibrary`](../kingdom/src/main/java/kingdom/contracts/AbstractLibrary.java) | ⚔️ Quest open — [#9](https://github.com/Hemanthkumar2k04/OOP-Kingdom/issues/9) |
+| **Tavern** | [`AbstractTavern`](../kingdom/src/main/java/kingdom/contracts/AbstractTavern.java) | ⚔️ Quest open — [#10](https://github.com/Hemanthkumar2k04/OOP-Kingdom/issues/10) |
 
 ---
 
 ## Instructions
 
-1. **Pick an entity** — Barracks, Blacksmith, or Market (Lumberyard is done as a reference)
+1. **Pick an entity** — Barracks, Blacksmith, Hospital, Library, or Tavern (Lumberyard and Market are done as references)
 2. **Read the contract** — open the corresponding abstract class in `kingdom/contracts/`
 3. **Implement the class** in `kingdom/entities/` — extend the contract, implement all methods, add `@JsonProperty`, register with `KingdomRegistry`
 4. **Write tests** in `kingdom/src/test/java/kingdom/entities/` — constructor, contract methods, extra methods, Jackson serialization
