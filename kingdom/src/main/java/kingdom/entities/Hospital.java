@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Hospital extends AbstractHospital {
 
     static {
-        KingdomRegistry.register(Hospital.class);
+     KingdomRegistry.register(Hospital.class);
     }
 
     @JsonProperty("identity")
