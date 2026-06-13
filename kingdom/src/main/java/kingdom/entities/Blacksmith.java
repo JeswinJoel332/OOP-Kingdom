@@ -1,0 +1,94 @@
+package kingdom.entities;
+
+import java.time.LocalDate;
+import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import kingdom.contracts.AbstractBlacksmith;
+import kingdom.core.KingdomRegistry;
+
+public class Blacksmith extends AbstractBlacksmith {
+
+    static {
+        KingdomRegistry.register(Blacksmith.class);
+    }
+
+    @JsonProperty("identity")
+    private String id;
+
+    @JsonProperty
+    private String name;
+
+    @JsonProperty
+    private String description;
+
+    @JsonProperty
+    private LocalDate foundingDate;
+
+    @JsonProperty
+    private Status status;
+
+    @JsonProperty
+    private int weaponCount;
+
+    public Blacksmith() {
+        this.id = "BLACKSMITH-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        this.name = "Blacksmith";
+        this.description = "A forge where weapons are crafted.";
+        this.foundingDate = LocalDate.now();
+        this.status = Status.UNDER_CONSTRUCTION;
+        this.weaponCount = 0;
+    }
+
+    public Blacksmith(String name, String description) {
+        this();
+        this.name = name;
+        this.description = description;
+        this.status = Status.OPERATIONAL;
+    }
+
+    @Override
+    public void forgeWeapon() {
+        weaponCount++;
+
+        if (weaponCount % 100 == 0) {
+            status = Status.DAMAGED;
+        }
+    }
+
+    @Override
+    public int getWeaponCount() {
+        return weaponCount;
+    }
+
+    @Override
+    public void repairAnvil() {
+        status = Status.OPERATIONAL;
+    }
+
+    @Override
+    public String getIdentity() {
+        return id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public LocalDate getFoundingDate() {
+        return foundingDate;
+    }
+
+    @Override
+    public Status getStatus() {
+        return status;
+    }
+}
